@@ -1,9 +1,11 @@
+load("defs.bzl", "cc_binary_gnu", "cc_binary_musl")
+
 cc_binary(
     name = "main",
     srcs = ["main.cpp"],
 )
 
-cc_binary(
+cc_binary_musl(
     name = "main_musl",
     srcs = ["main.cpp"],
     target_compatible_with = [
@@ -11,7 +13,7 @@ cc_binary(
     ],
 )
 
-cc_binary(
+cc_binary_gnu(
     name = "main_gnu",
     srcs = ["main.cpp"],
     target_compatible_with = [
