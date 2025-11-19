@@ -1,4 +1,4 @@
-load("//with_cfg:defs.bzl", "with_cfg")
+load("@with_cfg.bzl", "with_cfg")
 
 cc_binary_musl = with_cfg(native.cc_binary).set(
     "platforms",
